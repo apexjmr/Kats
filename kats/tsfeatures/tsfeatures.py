@@ -550,7 +550,7 @@ class TsFeatures:
         features = {}
         for method, params in _ALL_TS_FEATURES:
             if getattr(self, method, False):
-                logging.info(f"Generating {method} features...")
+                # logging.info(f"Generating {method} features...")
                 params = {name: getattr(self, val) for name, val in params.items()}
                 func = self._x_methods.get(method, None)
                 if func is None:
