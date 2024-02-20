@@ -455,7 +455,7 @@ class MKDetector(Detector):
                 # look back window_size day for trend detection
                 ts_tmp = ts_smoothed.loc[:t, :]
                 # append MK statistics to MK_statistics dataframe
-                MK_statistics = MK_statistics.append(
+                MK_statistics = MK_statistics._append(
                     # pyre-ignore[6]: Expected `Union[Dict[Union[int, str], typing.Any...
                     self.runDetector(ts=ts_tmp),
                     ignore_index=True,
