@@ -400,7 +400,7 @@ class MKDetector(Detector):
         self.ts = ts
 
         if training_days is None:
-            logging.info("Performing trend detection on the whole time series...")
+            # logging.info("Performing trend detection on the whole time series...")
             # check validity of the input value
             if len(ts) < window_size:
                 raise ParameterError(
